@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class C03_DriverGetMethodlari {
     public static void main(String[] args) throws InterruptedException {
 
-        System.setProperty("webdriver.chrome.driver","src/resources/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "src/resources/chromedriver");
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://www.wisequarter.com");
@@ -19,9 +19,9 @@ public class C03_DriverGetMethodlari {
         String expectedIcerik = "Wise";
         String actualTitle = driver.getTitle();
 
-        if (actualTitle.contains(expectedIcerik)){
+        if (actualTitle.contains(expectedIcerik)) {
             System.out.println("Title testi PASSED");
-        }else{
+        } else {
             System.out.println("Title Wise icermiyor, Test FAILED");
         }
         // Url'in https://www.wisequarter.com oldugunu test edin
@@ -29,9 +29,9 @@ public class C03_DriverGetMethodlari {
         String expectedUrl = "https://www.wisequarter.com";
         String actualUrl = driver.getCurrentUrl();
 
-        if (expectedUrl.equals(actualUrl)){
+        if (expectedUrl.equals(actualUrl)) {
             System.out.println("Url testi PASSED");
-        }else{
+        } else {
             System.out.println("Url testi FAILED");
             System.out.println("Actual Url : " + actualUrl);
         }
@@ -56,4 +56,5 @@ public class C03_DriverGetMethodlari {
         // bir Set olarak bize dondurur
         driver.close();
     }
+
 }
